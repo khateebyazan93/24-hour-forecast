@@ -28,11 +28,11 @@
         </activity>
 
         <activity android:name="com.example.yazan.a24hourforecast.activities.HourlyForecastsActivity"
-            android:label="3 Hour Forecast">
+            android:label="Next 3 Hour Forecast">
         </activity>
 
         <activity android:name="com.example.yazan.a24hourforecast.activities.DailyForecastsActivity"
-            android:label="14 Day Forecast">
+            android:label="Next 14 Day Forecast">
         </activity>
 
 

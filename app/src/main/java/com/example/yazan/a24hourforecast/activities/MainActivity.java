@@ -434,8 +434,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             mTimeTextView.setText(currentDateString);
 
             mTemperatureTextView.setText(mCurrentWeather.getTemperature() + "");
-            mHumidityTextView.setText(mCurrentWeather.getHumidity() + "");
-            mWindSpeedTextView.setText(mCurrentWeather.getWindSpeed() + "");
+            mHumidityTextView.setText((mCurrentWeather.getHumidity()/100) + "%");
+            mWindSpeedTextView.setText(mCurrentWeather.getWindSpeed() + " m/s");
             mDescriptionTextView.setText(mCurrentWeather.getDescription());
         }
 
