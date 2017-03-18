@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFB217"
+    tools:context="com.example.yazan.a24hourforecast.activities.MainActivity">
+
+    <!-- ProgressBar refresh-->
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/refresh_image_view"/>
+
+    <!-- icon image refresh-->
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:id="@+id/refresh_image_view"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh"
+        android:layout_marginBottom="30dp"/>
+
+
+<!-- weather temperature -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="___"
+        android:id="@+id/temperature_text_view"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="130sp"/>
+
+    <!-- weather time -->
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:id="@+id/time_text_view"
+        android:layout_above="@id/temperature_text_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="#80ffffff"
+        android:textSize="18sp"/>
+
+    <!-- weather location-->
+    <TextView
+        android:layout_marginBottom="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="no location"
+        android:id="@+id/location_text_view"
+        android:layout_above="@+id/time_text_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"/>
+
+    <!-- weather icon-->
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/weather_icon_Image_View"
+        android:layout_above="@+id/time_text_view"
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/ic_01d"/>
+
+
+    <!-- weather temperature icon-->
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/degree_sign"
+        android:layout_toEndOf="@id/temperature_text_view"
+        android:layout_alignTop="@id/temperature_text_view"
+        android:layout_toRightOf="@id/temperature_text_view"
+        android:src="@drawable/degree"
+        android:layout_marginTop="50dp"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/temperature_text_view"
+        android:layout_alignLeft="@id/weather_icon_Image_View"
+        android:layout_alignStart="@id/weather_icon_Image_View"
+        android:id="@+id/linearLayout"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="humidity"
+                android:textColor="#80FFFFFF"
+                android:gravity="center_horizontal"/>
+
+           <!-- humidity value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--%"
+                android:id="@+id/humidity_text_view"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="wind speed"
+                android:textColor="#80ffffff"
+                android:gravity="center_horizontal"/>
+
+            <!-- wind speed value -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--%"
+                android:id="@+id/wind_speed_text_view"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!-- weather description-->
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="getting weather dara ..."
+        android:id="@+id/description_text_view"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"/>
+
+    <!-- hourly && daily forecasts button-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:text="hourly"
+            android:id="@+id/hourly_button"
+            style="@style/forecast_button"/>
+
+        <Button
+            android:text="daily"
+            android:id="@+id/daily_button"
+            android:layout_marginLeft="2dp"
+            style="@style/forecast_button"/>
+    </LinearLayout>
+</RelativeLayout>

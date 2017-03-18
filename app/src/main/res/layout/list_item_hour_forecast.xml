@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="80dp"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:background="#ffaa00"
+              android:orientation="horizontal">
+
+ <!-- hour temperature -->
+    <TextView
+        android:id="@+id/temperature_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/temperature_background"
+        android:gravity="center"
+        tools:text="30"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <!-- hour icon -->
+    <ImageView
+        android:id="@+id/icon_image_view"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/ic_01d"
+        android:textStyle="bold"/>
+
+    <!-- hour description -->
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:maxLines="2"
+        tools:text="light rain"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical">
+
+        <!-- hour -->
+        <TextView
+            android:id="@+id/hour_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            tools:text="11:00 PM"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!-- day -->
+        <TextView
+            android:id="@+id/hourly_day_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="top"
+            tools:text="Tuesday"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
