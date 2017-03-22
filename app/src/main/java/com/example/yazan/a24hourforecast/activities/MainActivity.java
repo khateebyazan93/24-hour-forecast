@@ -321,7 +321,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
             } else if (!isWifiOn() || !isGPSOn()) {
                 if (!isWifiOn()) {
-                    Toast.makeText(this, "NO INTERNET CONNECTION", Toast.LENGTH_SHORT).show();
                     registerReceiver(mNetworkStateIntentReceiver, mNetworkStateChangedFilter);
 
                 }

@@ -97,10 +97,11 @@ public class DailyForecastsActivity extends AppCompatActivity implements LoaderM
     @Override
     public void onLoadFinished(Loader<List<DayForecast>> loader, List<DayForecast> data) {
 
-        //clear the adapter
-        mDayForecastAdapter.clear();
+
 
         if(data != null) {
+            //clear the adapter
+            mDayForecastAdapter.clear();
             mDayForecastAdapter.addAll(data);
             mProgressBar.setVisibility(View.GONE);
         }

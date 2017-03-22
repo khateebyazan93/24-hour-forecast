@@ -97,9 +97,10 @@ ProgressBar mProgressBar ;
 
     @Override
     public void onLoadFinished(Loader<List<HourForecast>> loader, List<HourForecast> data) {
-        mHourForecastAdapter.clear();
+
 
         if(data != null) {
+            mHourForecastAdapter.clear();
             mHourForecastAdapter.addAll(data);
             mProgressBar.setVisibility(View.GONE);
         }

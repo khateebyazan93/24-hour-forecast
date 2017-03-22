@@ -49,7 +49,7 @@
         android:layout_above="@id/temperature_text_view"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:text="..."
+        android:text="- - -"
         android:textColor="#80ffffff"
         android:textSize="18sp"/>
 
